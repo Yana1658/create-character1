@@ -45,28 +45,4 @@ button:active {
     max-width: 300px; 
     border-radius: 10px; 
 }
-/* responsive design for small screens */
-@media (max-width: 768px) {
-    .container {
-        max-width: 100%;
-        padding: 15px;
-        margin: 10px;
-    }
 
-    button {
-        padding: 8px 16px;
-        font-size: 14px;
-    }
-
-    .checkbox-group {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .character-preview img, .character-card img {
-        width: 100%;
-    }
-    .image-block img {
-        max-width: 100%; 
-    }
-}
