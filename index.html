@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container"> 
+        <h1>Character Sheet Creator</h1>
+    
+        <div class="image-block">
+      <img src="image/The Whispering Woods.jpg" alt="background" style="width:500px;height:300px;">
+      </div>
+      <form id="characterForm">
+        <div class="form-section">
+            <label for="name">Character Name:</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+
+        <div class="form-section">
+            <label for="class">Class:</label>
+            <select id="class" name="class" onchange="updateCharacterImage()">   
+                
+                <option value="Warrior">Warrior</option>
+                <option value="Mage">Mage</option>
+                <option value="Thief">Thief</option>
+            </select>
+        </div>
+        <!--The user selects a new character class from the drop-down list.When the selection changes 
+        (onchange), the updateCharacterImage() function is called. The function changes the image 
+        source (in this case, "images/" + selectedClass + ".jpg") to display the image that 
+        corresponds to the selected class.-->
+
+        <div class="form-section">
+            <label for="skills">Skills:</label><br>
+            <div class="checkbox-group">
+                <input type="checkbox" id="swordsmanship" name="skills" value="Swordsmanship">
+                <label for="swordsmanship">Swordsmanship</label><br>
+                <input type="checkbox" id="magic" name="skills" value="Magic">
+                <label for="magic">Magic</label><br>
+                <input type="checkbox" id="archery" name="skills" value="Archery">
+                <label for="archery">Archery</label><br>
+            </div>
+        </div>
+        
+        <div class="form-section">
+            <label for="strength">Strength (1-10):</label>
+            <input type="number" id="strength" name="strength" min="1" max="10">
+        </div>
+
+        <div class="form-section">
+            <label for="alignment">Alignment:</label><br>
+            <div class="radio-group">
+                <input type="radio" id="light" name="alignment" value="Light">
+                <label for="light">Light</label>
+                <input type="radio" id="dark" name="alignment" value="Dark">
+                <label for="dark">Dark</label>
+                <input type="radio" id="neutral" name="alignment" value="Neutral">
+                <label for="neutral">Neutral</label>
+            </div>
+        </div>
+
+        <div class="form-section">
+            <label for="specialAbility">Does your character have a special ability?</label>
+            <input type="checkbox" id="specialAbility" name="specialAbility">
+        </div>
+        <div class="form-section"> 
+            <label for="experience">Experience (1-100):</label>
+            <input type="range" id="experience" name="experience" min="1" max="100" value="1">
+            <span id="experienceValue">1</span>
+        </div>
+        
+        <button type="submit">Create Character</button>
+    </form>
+</div>
+    </div>
+</body>
+<script src="script.js"></script>
+</html>
